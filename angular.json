@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
+              "/coder/mnt/excz/loginFire/login-app/node_modules/bootswatch/dist/simplex/bootstrap.css",
+              "/coder/mnt/excz/loginFire/login-app/node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "/coder/mnt/excz/loginFire/login-app/node_modules/jquery/dist/jquery.js",
+              "/coder/mnt/excz/loginFire/login-app/node_modules/popper.js/dist/popper.js",
+              "/coder/mnt/excz/loginFire/login-app/node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
