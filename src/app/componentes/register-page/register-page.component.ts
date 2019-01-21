@@ -18,8 +18,6 @@ export class RegisterPageComponent implements OnInit {
   }
 
   onSubmitAddUser(){
-    console.log(this.email);
-    console.log(this.password);
     this._authService.registerUser(this.email, this.password)
     .then((res)=> {
       console.log("Bien!");
