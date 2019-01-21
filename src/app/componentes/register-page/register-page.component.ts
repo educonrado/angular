@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
+//Para redireccionar 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -11,7 +13,8 @@ export class RegisterPageComponent implements OnInit {
   public email:string;
   public password:string;
   constructor(
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _router: Router
   ) { }
 
   ngOnInit() {
@@ -20,8 +23,7 @@ export class RegisterPageComponent implements OnInit {
   onSubmitAddUser(){
     this._authService.registerUser(this.email, this.password)
     .then((res)=> {
-      console.log("Bien!");
-      console.log(res);
+      this._router.navigate(['/privado']);
     }).catch((err)=>{
       console.log(err);
     });
