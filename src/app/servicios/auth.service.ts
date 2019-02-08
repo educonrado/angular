@@ -8,6 +8,8 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
+  logeado: boolean;
+
   constructor(
     public _afAuth:AngularFireAuth
   ) { }
@@ -30,7 +32,7 @@ export class AuthService {
 
   getAuth(){
     //Cambiado para evitar error orginal.  authState.map(auth=>auth)
-    return this._afAuth.authState.subscribe(auth => auth);
+    return this._afAuth.authState;
   }
 
   logout(){
