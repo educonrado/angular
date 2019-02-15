@@ -35,6 +35,9 @@ export class AuthService {
     });
   }
 
+  loginGoogle(){
+    return this._afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
   getAuth() {
     //Cambiado para evitar error orginal.  authState.map(auth=>auth)
     return this._afAuth.authState;
